@@ -1,2 +1,35 @@
-echo "node_modules/" >> .gitignore
-echo "dist/" >> .gitignore
+# === Laravel - posts-api/ ===
+/posts-api/vendor/
+/posts-api/node_modules/
+/posts-api/public/storage/
+/posts-api/storage/*.key
+/posts-api/.env
+/posts-api/.env.*
+/posts-api/.phpunit.result.cache
+/posts-api/bootstrap/cache/*
+!/posts-api/bootstrap/cache/.gitignore
+
+# Laravel IDE/editor & log files
+/posts-api/.idea/
+/posts-api/.vscode/
+/posts-api/*.log
+/posts-api/*.sqlite
+
+# === Angular - posts-app/ ===
+/posts-app/node_modules/
+/posts-app/dist/
+/posts-app/.angular/
+/posts-app/.env
+/posts-app/.env.*
+
+# Angular IDE/editor & log files
+/posts-app/.idea/
+/posts-app/.vscode/
+/posts-app/*.log
+
+# === OS / Global editor files ===
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.bak
