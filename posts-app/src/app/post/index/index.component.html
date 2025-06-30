@@ -12,7 +12,7 @@
           <th scope="col">Id</th>
           <th scope="col">title</th>
           <th scope="col">Body</th>
-          <th scope="col" width="250px">Action</th>
+          <th scope="col" width="280px">Action</th>
         </tr>
       </thead>
 
@@ -23,8 +23,22 @@
           <td>{{ post.title }}</td>
           <td>{{ post.body }}</td>
           <td>
-            <button class="btn btn-success btn-small mx-2">edit</button>
-            <button class="btn btn-danger btn-small mx-2">delete</button>
+            <a
+              [routerLink]="['/posts', post.id, 'edit']"
+              class="btn btn-success btn-small mx-2"
+              >edit</a
+            >
+            <a
+              [routerLink]="['/posts', post.id]"
+              class="btn btn-primary btn-small mx-2"
+              >Show</a
+            >
+            <button
+              (click)="deletPost(post.id)"
+              class="btn btn-danger btn-small mx-2"
+            >
+              delete
+            </button>
           </td>
         </tr>
         }
